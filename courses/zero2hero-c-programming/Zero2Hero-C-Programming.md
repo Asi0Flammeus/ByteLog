@@ -68,9 +68,16 @@
     - can define DEBUG directly in compiler command
       - `gcc -o variables variables.c -DDEBUG`
 
--
-
 ## Arrays & Strings
+
+- an array is a block of memory allocated to a set of variables that share the same type like `int`
+- it's a good practice to "pound" a max of the number of elements for an array via the `#define` compiler variable
+  - eg. `#define MAX_IDS 32`
+- no need to declare the value of the element when declaring the array.
+- a string is simply an array
+- using `""` let the compiler to add a "0-delimiter", whereas with `''` will not be null-terminated
+  - eg. `char otherstr[] = {'h', 'e', 'h', 'e', 0};`
+  - not null-terminated arrays is a risk of leaking data of the code that wasn't supposed to be shared.
 
 ## Control Flow Structure
 

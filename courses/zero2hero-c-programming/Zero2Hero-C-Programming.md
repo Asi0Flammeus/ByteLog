@@ -79,6 +79,13 @@
   - eg. `char otherstr[] = {'h', 'e', 'h', 'e', 0};`
   - not null-terminated arrays is a risk of leaking data of the code that wasn't supposed to be shared.
 
+### Conditional statements
+
+- conditional helps to apply some logic to script
+  - there are at the core of proggramming
+- the syntax of if is simply `if (condition) {do thing} else if (condition 2) {other thing to do} else {3rd thing}`
+- for `for` loops, the best practice is to initialise the iterator twice (cf. `conditional-loops.c`)
+
 ## Control Flow Structure
 
 ## Structs & Unions

@@ -24,4 +24,23 @@ As the creator of Vim, Bram Moolenaar puts it:
 
 ## Vim Basics
 
--
+- to close and update a file, use the command `ZZ` which is equivalent to `:x`
+- word =/= WORD:
+  - word (w) stops at each delimiter
+  - Word (W) only stops to space delimiter
+- most of the time vim motions are defined by the initial letter of the corresponding actions or object
+- `ctrl+ d,u,f,b` allows us to navigate though the file (down, up, full-page, beginning)
+  - fun way also is to enter a percentage to jump at the portion of the file, eg. `50%`
+- vim is used in different modes: normal, insert and view
+  - if you want to do insert -> normal for 1 command -> insert, then use `ctrl+o`
+- you can have an powerful search using `*` or `#` if you looking for the word under the cursor
+- a vim action syntax is `<verb><modifier><nouns>`
+  - verbs
+    - powerless (apply on 1 character)
+      - `x`: delete 1 character
+      - `c`: replace 1 character
+      - `s`: delete 1 character + insert mode
+      - `a`: append
+        - `A`: append to the end of the line
+      - `i`: go insert mode
+    - powerful (apply on any object)

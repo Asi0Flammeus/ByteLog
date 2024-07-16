@@ -85,6 +85,10 @@
   - there are at the core of proggramming
 - the syntax of if is simply `if (condition) {do thing} else if (condition 2) {other thing to do} else {3rd thing}`
 - for `for` loops, the best practice is to initialise the iterator twice (cf. `conditional-loops.c`)
+- there are 3 loops
+  - for: apply logic for a given iterator
+  - while: check condition and apply logic, over again while condition true
+  - do while: do one logic and then check conditional and do it again while condition true
 
 ## Control Flow Structure
 

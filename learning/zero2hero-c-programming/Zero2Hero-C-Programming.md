@@ -79,6 +79,8 @@
   - eg. `char otherstr[] = {'h', 'e', 'h', 'e', 0};`
   - not null-terminated arrays is a risk of leaking data of the code that wasn't supposed to be shared.
 
+## Control Flow Structure
+
 ### Conditional statements
 
 - conditional helps to apply some logic to script
@@ -90,9 +92,16 @@
   - while: check condition and apply logic, over again while condition true
   - do while: do one logic and then check conditional and do it again while condition true
 
-## Control Flow Structure
+### Function syntax
+
+- `return_type name(list of arguments){}`
+  - the return_type is the type of the returned variable
+  - in general, the `main` function has an int as a return and most of the time we `return 0;`
+- most of the time, functions are used to avoid repeting ourself, and for better code it's preferable that a function achieves a single thing
 
 ## Structs & Unions
+
+### Structures
 
 ## Pointer& Memory Allocatio
 

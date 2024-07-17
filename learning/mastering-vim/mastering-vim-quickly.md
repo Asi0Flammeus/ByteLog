@@ -44,3 +44,19 @@ As the creator of Vim, Bram Moolenaar puts it:
         - `A`: append to the end of the line
       - `i`: go insert mode
     - powerful (apply on any object)
+      - y: yank
+      - d: delete
+      - c: change
+      - v: visualy select
+  - modifier
+    - i: inner
+    - a: around
+    - <NUM>: number as a mutlipier
+    - t: until forward
+      - T: until backward
+    - f: find forward
+      - F: find backward
+    - /: find expression forward
+      - ?: find expression backward
+  - noun
+    -

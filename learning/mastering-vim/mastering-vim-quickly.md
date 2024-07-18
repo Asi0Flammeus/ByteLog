@@ -59,4 +59,43 @@ As the creator of Vim, Bram Moolenaar puts it:
     - /: find expression forward
       - ?: find expression backward
   - noun
-    -
+    - w, W: the next word
+    - b, B: the word before
+    - e: the end of word
+    - s: the sentence
+    - $: the end of the line
+    - ^, 0: the begining of the line
+    - p: the paragraph
+    - %: the matching symbols (), [], {}, '', ""
+    - t: the html tag
+    - b: the block
+    - h,j,k,l: left, up, down, right
+- before any noun a range can be added
+  - <NUM>: the line number
+  - $: the last line
+  - %: all the lines
+  - <NUM>,<NUM>: line number of inclusive interval
+  - .: the current line
+  - +<NUM>,+<NUM>: relative line number of inclusive interval (works with - too)
+  - ?foo?,/bar: inclusive interval define by the lines that contains foo and bar
+- range is quite useful for search and replace command
+  - `[range] s/foo/bar/[flags] [count]`
+    - flags
+      - c: confirmation for each substitute
+      - g: replace all
+      - i: ignore case for pattern
+      - I: don't ignore case for pattern
+    - the range can also be selected in visual mode
+      - v + select lines + type `:,`
+    - if want to replace specifically a word and not the pattern use
+      - `:s/\word\/new word/g`
+    - if you want to replace multiple strings at once use
+      - `s/\(word 1 | word 2)\/new word/g`
+- the global command could be quite powerful
+  - `:[range]g/pattern/cmd` with cmd as the command you want to apply on the rangge
+  - eg. remove all blank lines
+    - `:g/^\s*$/d`
+- the move cmd
+  - `:[range]m<NUM>` move range lines to NUM line
+  - `:[range]t<NUM>` copy range lines to NUM line
+- Registers are quite important to understand as they can be quite powerful because they extend a lot the copy/paste functionalities

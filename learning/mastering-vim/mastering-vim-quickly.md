@@ -106,6 +106,7 @@ As the creator of Vim, Bram Moolenaar puts it:
 
 - Registers are quite important to understand as they can be quite powerful because they extend a lot the copy/paste functionalities
 - a register is simply memory allocation for text
+- [website](https://www.baeldung.com/linux/vim-registers) for further info
 - there's a shit tone of registers accessible in vim divided into several types
   - unnamed, `""`
     - used per default when delete or yank

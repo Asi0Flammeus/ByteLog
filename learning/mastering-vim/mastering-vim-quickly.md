@@ -34,6 +34,9 @@ As the creator of Vim, Bram Moolenaar puts it:
 - vim is used in different modes: normal, insert and view
   - if you want to do insert -> normal for 1 command -> insert, then use `ctrl+o`
 - you can have an powerful search using `*` or `#` if you looking for the word under the cursor
+
+## Vim Syntax
+
 - a vim action syntax is `<verb><modifier><nouns>`
   - verbs
     - powerless (apply on 1 character)
@@ -98,4 +101,31 @@ As the creator of Vim, Bram Moolenaar puts it:
 - the move cmd
   - `:[range]m<NUM>` move range lines to NUM line
   - `:[range]t<NUM>` copy range lines to NUM line
+
+## Registers
+
 - Registers are quite important to understand as they can be quite powerful because they extend a lot the copy/paste functionalities
+- a register is simply memory allocation for text
+- there's a shit tone of registers accessible in vim divided into several types
+  - unnamed, `""`
+    - used per default when delete or yank
+  - numbered, `"0` to `"9`
+  - letter named, `"a` to `"z` or `"A` to `"Z`
+    - customed clipboard for handling multiple yanks at the same time
+    - lower and upper case register refer to the same text, just when yank to uppercase, it append to the already present text, whereas with lower case it replaces it
+  - small delete, `"-`
+    - any lesser than a line and is deleted goes here
+  - expression, `:.`
+    - last thing you have entered in inser mode goes here
+    - all the keys from the insertion in that mode to back to normal
+    - when typing `..` in normal mode it calls this reg
+  - command, `":`
+    - last expression used goes here
+  - black hole, `"_`
+  - last search pattern, `"/`
+  - selection and drop, `"*`, `"+`, `"-`
+  - , `"%`
+  - , `"#`
+- the syntax is `<register_name><vim action>`
+  - for eg. `"ayy` to copy line in `"a` register
+- to recall what's in any register run `:reg(ister)`

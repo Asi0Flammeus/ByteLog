@@ -106,11 +106,15 @@ As the creator of Vim, Bram Moolenaar puts it:
 
 - Registers are quite important to understand as they can be quite powerful because they extend a lot the copy/paste functionalities
 - a register is simply memory allocation for text
+- use `ctrl-r` in insert mode to call them
+  - can be used in command mode too
+    - for eg. `:s/ctrl-r + reg/bar/g`
 - [website](https://www.baeldung.com/linux/vim-registers) for further info
 - there's a shit tone of registers accessible in vim divided into several types
   - unnamed, `""`
     - used per default when delete or yank
   - numbered, `"0` to `"9`
+    - last yank goes to `"0`
   - letter named, `"a` to `"z` or `"A` to `"Z`
     - customed clipboard for handling multiple yanks at the same time
     - lower and upper case register refer to the same text, just when yank to uppercase, it append to the already present text, whereas with lower case it replaces it
@@ -125,8 +129,11 @@ As the creator of Vim, Bram Moolenaar puts it:
   - black hole, `"_`
   - last search pattern, `"/`
   - selection and drop, `"*`, `"+`, `"-`
-  - , `"%`
-  - , `"#`
+    - `"*` and `"+` are used for copy from vim to external and external to vim, respectively
+      - not necessary with nvim and plugin
+  - current filpath register, `"%`
+  - alternative file, `"#`
+    - consider it as last file name
 - the syntax is `<register_name><vim action>`
   - for eg. `"ayy` to copy line in `"a` register
 - to recall what's in any register run `:reg(ister)`

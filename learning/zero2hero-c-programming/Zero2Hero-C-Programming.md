@@ -103,7 +103,16 @@
 
 ### Structures
 
-## Pointer& Memory Allocatio
+- A structure is a way to create an object of a new type with multiple data type
+- must be define in compile time (see `structure.c`)
+- it's a good practice to append a suffix `_t` to the name of the struc to note that it is a new type
+  - why? bc like this the variable would not have the same variable name as the type itself
+
+### Union
+
+- union is like a structure but it will create just enough room in memory for the largest element
+- useful in memory constraint environment
+-
 
 ## Introduction to glibc
 

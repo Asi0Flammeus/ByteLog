@@ -137,3 +137,32 @@ As the creator of Vim, Bram Moolenaar puts it:
 - the syntax is `<register_name><vim action>`
   - for eg. `"ayy` to copy line in `"a` register
 - to recall what's in any register run `:reg(ister)`
+
+## Buffers
+
+- buffer = in-memory text of a file
+- vim = tab $\subset$ window $\subset$ buffer
+- use `:ls` to list buffers and `:bp` to cycle through them
+- mostly use to edit mutliple files at the same time
+  - personal opinion: I find it easier to open another terminal pane and use bash commands to edit multiple files
+- the use of buffers is less needed when using nvim because with plugin like telescope, one can reach easily in files
+
+## Macros
+
+- macros = recording of a sequence of actions
+- to record one use `q<register><actions>q` in normal mode
+  - note that you can have multiple macros with the use of several reg (from a to z)
+- to execute a macro use `@<register>`
+  - last macro with `@@`
+  - N time the last macro, `<NUM>@`
+- enable `lazyredraw` if you want to apply a macro more than a thousands to avoid displaying on screen
+- macros can be applied to multiple file by using args
+  - load files in args, `:args path/to/files/*.md`
+  - run macro, `:argdo normal @<reg>`
+  - save in all buffers, `:argdo update`
+- edit a macro simply paste the corresponding reg on a line, edit it and then copy back to the reg with `0<reg>y$` (can't use `yy` because it will add a breakline)
+- macros will be recursived if the reg used is empty
+
+## Visual mode
+
+- `V`, let you visualy select a whole line

@@ -2,12 +2,18 @@
 #include <stdbool.h>
 #define MAX_EMPLOYEES 1000
 
-struct employee_t {
+__attribute__((__packed__)) struct employee_t {
         int id;
         char firstname[64];
         char lastname[64];
         float income;
         bool ismanager;
+};
+
+union myunion_u {
+      int x;
+      char c;
+      short s;
 };
 
 int main() {
@@ -23,8 +29,14 @@ int main() {
         employees[i].ismanager = false;
   }
 
+    printf("size of struc: %d\n", sizeof(struct employee_t));
     printf("%f\n", employees[10].income);
     printf("%f\n", Fred.income);
+    
+    union myunion_u u;
+    u.x = 0x41424344;
+    
+    printf("%hx, %hhx\n", u.s, u.c);
 
 
 

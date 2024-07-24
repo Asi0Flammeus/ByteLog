@@ -107,6 +107,9 @@
 - must be define in compile time (see `structure.c`)
 - it's a good practice to append a suffix `_t` to the name of the struc to note that it is a new type
   - why? bc like this the variable would not have the same variable name as the type itself
+- the struct modifier `packed` is used to make sure the memory allocation for that struct is the same through different OS environment
+  - sometime it can reduce the use of memory
+- simple structures can be directly initialize with `struct mystruct_t something = {var1, var2, ...}`
 
 ### Union
 

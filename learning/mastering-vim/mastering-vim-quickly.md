@@ -166,3 +166,27 @@ As the creator of Vim, Bram Moolenaar puts it:
 ## Visual mode
 
 - `V`, let you visualy select a whole line
+- you can apply any vim action to selected lines with `:normal <action>`
+  - eg. `:normal A;` to append `;` at the end of the lines
+  - use `%normal` if you want it to be applied to the entire file
+- add specific remap to have `J` and `K` that move the selected lines up or down
+  - with nvim maybe use this pluggin: https://github.com/echasnovski/mini.nvim
+
+## Remaping
+
+- remap can be recursive, which means that it changes the behavior even in the config file
+  - by default you should use non-recursive mapping, except when explicitly needed
+- `:map` = recursive, `noremap` = non-recursive, `unmap` = unmapping
+- prefixes are used to declare the mode in which it is applied
+  - no prefix: normal, visual, operator-pending
+  - `nmap`: normal
+  - `xmap`: visual
+  - `imap`: insert
+  - `cmap`: command-line
+  - `omap`: operator-pending
+- use the key `<nop>` to disable a key
+
+## Folding
+
+- use in normal mode `zf<noum>` to fold a portion of the file
+- not sure how to properly unfold

@@ -190,3 +190,24 @@ As the creator of Vim, Bram Moolenaar puts it:
 
 - use in normal mode `zf<noum>` to fold a portion of the file
 - not sure how to properly unfold
+
+## Effective multiple file editing
+
+- I prefer to use bash commands to edit multiple files at the same
+  - but maybe it is just a skill issue
+- the `w` and `up` command are different
+  - `w` always edit the file even though no modification was done
+  - `up` only save if the file has been modified
+- do `:args` to get the list of arguments files
+  - `:args [path]` to add all files in path to arglist
+
+## Productivity tips
+
+- autocomplete by vim
+  - in insert mode do `ctlr+x` with the corresponding dictionnary
+    - `ctrl+I`, complete whole lines of text
+    - `ctrl+i`, complete words from included files
+    - `ctrl+t`, complete words from thesaurus
+      - to set this dictionnary you have to set the `thesaurus.txt` file
+        - `set thesaurus+=[path-to-thesaure-txt-file]`
+      - useful to replace a word by its synonyms

@@ -115,7 +115,23 @@
 
 - union is like a structure but it will create just enough room in memory for the largest element
 - useful in memory constraint environment
--
+
+## Pointers & Memory Allocation
+
+### Pointers
+
+- when declaring a variable it define an address where the value is saved
+- a pointer is simply a reference to that address
+  - by convention we add the prefix `p` to any variable that is a pointer
+- we use the term 'deference' to mean that we take the value behind the address
+  - `pX` is the address behind X
+  - `*pX`is the value behind the address of `pX`, so the value `X`
+- to set the address of `X` to a pointer simply use `&`
+  - `int \*pX = &X
+- the reason why it is handy to use pointers rather the variable (or struct) itself is
+  - to use variable that live in outside local scope
+    - for eg. like we define a struct and then initialize it with a function
+  -
 
 ## Introduction to glibc
 

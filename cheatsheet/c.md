@@ -1,15 +1,23 @@
 # standard header librairies
 
+tips: if you forget what lib is associated to a function, use in the terminal `man funcion_name`
+
 ## Basics functions
 
-```
-<stdio.h>
+```c
+#include <stdio.h>
 ```
 
 ## bool variable
 
+```c
+#include <stdbool.h>
 ```
-<stdbool.h>
+
+## dynamic memory allocation
+
+```c
+#include <stdbool.h>
 ```
 
 # Data types

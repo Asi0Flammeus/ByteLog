@@ -133,6 +133,14 @@
     - for eg. like we define a struct and then initialize it with a function
   -
 
+### Dynamic Memory Allocation
+
+- in C, one can use `malloc` libc function to allocate
+  - to call the libc library use `#include <stdlib.h>`
+- when we are done with using the memory for a variable we have to free the memory
+  - `free(variable)` then set variable to `NULL` to delete the pointer
+  - most of the time at then end of the code or scope where the variable is used
+
 ## Introduction to glibc
 
 ## File Input & Output

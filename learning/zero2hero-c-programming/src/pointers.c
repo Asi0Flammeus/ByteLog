@@ -1,4 +1,8 @@
 #include <stdbool.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+#define MAX_EMPLOYEES = 1000 
 
 struct employee_t {
     int id;
@@ -29,4 +33,22 @@ int main() {
   initialize_employee(&Ralph);
 
   printf("%d\n", Ralph.income);
+
+  int n = 4; 
+
+  struct employee_t *employees = malloc(sizeof(struct employee_t)*n);
+  // use this to verify proper memory allocation 
+  if (employees == NULL) {
+      printf("The allocator failed \n");
+      return -1;
+  }
+  initialize_employee(&employees[0]);
+
+  printf("%d\n", employees[0].income);
+  
+  // FREE THE POINTERS 
+  free(employees);
+  employees = NULL;
+
 }
+

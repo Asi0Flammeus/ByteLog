@@ -141,6 +141,23 @@
   - `free(variable)` then set variable to `NULL` to delete the pointer
   - most of the time at then end of the code or scope where the variable is used
 
+### Pointers to Pointers aka Double Pointers
+
+- a double pointers is the address of an address
+
+```
+int i;
+int *pi = &i;
+int **ppi = &pi;
+```
+
+- main use of double pointers is to update pointers themselves outside of their definition scope
+  - eg. you want to `realloc()` the pointers, so when you have dynamically allocate memory to expand or contract an element (array, structure)
+- this is particularly useful when you are in a function that has a custom type return that is different of your pointer but you want
+  - for eg. as an out parameter, a way to indirectly output something while having the function outputs a `status_t` for error handling
+- type casting is a thing in C
+  - for eg. `ptr = (int *)malloc(sizeof(int))` force the compiler to convert the void type of malloc into a pointer to an int
+
 ## Introduction to glibc
 
 ## File Input & Output

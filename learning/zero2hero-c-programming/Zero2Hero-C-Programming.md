@@ -158,6 +158,15 @@ int **ppi = &pi;
 - type casting is a thing in C
   - for eg. `ptr = (int *)malloc(sizeof(int))` force the compiler to convert the void type of malloc into a pointer to an int
 
+### Testing for Memory Leaks
+
+- when using `malloc()` and others, we are blocking (borrowing) memory from the system on which the code is runned
+- to avoid memory leak (ie. clogging the memory) we have to make sure that we have effectively free the allocated memory
+- the best tool to use for that is to use Valgrind
+  - compile with the flag `-g` at the end
+  - then run `valgrind --leak-check=full ./compiled-script -s`
+- when testing we need to do full coverage of the path that the script can take
+
 ## Introduction to glibc
 
 ## File Input & Output

@@ -98,4 +98,15 @@ L (or R) + j
 
 - den is pipe you can't go through
 - if one is next to a wall you can get a jump boost
+
   - `hold d+l/r` in the direction of the wall and jump
+
+  ## corpse fling
+
+  - when coliding with large corpse you pres and hold all 3 action keys
+
+  ## Den boosting
+
+  - den is pipe you can't go through
+  - if one is next to a wall you can
+    get a jump boost - `hold d+l/r` in the direction of the wall and jump

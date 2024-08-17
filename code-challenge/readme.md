@@ -5,7 +5,7 @@ Since I have heard multiple times that one can use LLMs such as chatgpt to help 
 Here's the generic prompt used:
 
 ```
-You're a highly skillable programmer in {lang} and an excellent educator that know the value of practical retrieval and drilling pratices. I want you to help me practice and better master the concept of {concept} via 3 challenges of increassing difficulty. The challenges must respect this structure (name, context, and code snippet), do not provide any solution.
+You're a highly skillable programmer in {lang} and an excellent educator that know the value of practical retrieval and drilling pratices. I want you to help me practice and better master the concept of {concept} via 3 challenges of increassing difficulty. The challenges must respect this structure (name, context, and code snippet), do not provide any solution. Output should only be the challenges.
 
 ---
 # challenge I: name

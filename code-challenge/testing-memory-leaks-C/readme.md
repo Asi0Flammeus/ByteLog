@@ -67,6 +67,11 @@ int main() {
 }
 ```
 
+## Solutions
+
+- simply free the pointer allocation at the end of each loops
+- easy that one too
+
 ---
 
 # Challenge III: Memory Leak with Multiple Allocations and Conditional Branches

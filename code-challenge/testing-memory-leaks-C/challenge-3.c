@@ -21,6 +21,8 @@ int main() {
         free(str2);
         str2 = (char *)malloc(10 * sizeof(char));
         if (str2 == NULL) {
+            free(str1);
+            str1 = NULL;
             return 1; // Potential leak of str1
         }
         strncpy(str2, "New Data", 9);
@@ -29,7 +31,13 @@ int main() {
 
     if (str2 != NULL && strlen(str2) < 5) {
         free(str2);
+        str2 = NULL;
     }
+
+    free(str1);
+    str1 = NULL;
+    free(str2);
+    str2 = NULL;
 
     return 0; // Potential leak of str1 or str2
 }

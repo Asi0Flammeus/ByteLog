@@ -24,6 +24,7 @@ tips: if you forget what lib is associated to a function, use in the terminal `m
 
 ## short
 
+- `size_t` is an allias for unsigned interger
 - is a subset of `int` type
 - `signed` by default
   - range from -32768 to 32728

@@ -169,6 +169,20 @@ int **ppi = &pi;
 
 ## Introduction to glibc
 
+- from the lowlevellearning guy "with great power, actually comes great simplicity"
+  - the power not comes from the syntax (which is simple), but from the underlying libraries
+- syscall interface allows the user mode interface to request action to the kernel level
+- `gcc` stands for GNU Compiler Collection
+  - embark by default library glibc
+    - like `malloc` or `printf`
+  - one can see the libraries used under the hook with `ldd compile_c_code`
+- writing in C is more close to manage low level processes thanks to the use of libraries
+- have the good practice to always read the description of a function with manpage to be aware of the possible edge case and avoid security hole
+- always check the return value of function to be sure that they returned the expected type in any case
+- `errno` is a global variable that is an error number to diagnose the type of error that we encountered
+  - the documentation of the different assigned number should be stated in the ERRORS section of the associated man page
+  - then when an error is encountered use `perror("function")` to print the description of the corresponding error
+
 ## File Input & Output
 
 ## Data Types

@@ -32,7 +32,15 @@ sudo snap install bitwarden
 ```
 chmod 600 ~/.ssh/id_ed25519
 chmod 644 ~/.ssh/id_ed25519.pub
+sudo chown -R asi0:asi0 ~/.ssh/
 eval "$(ssh-agent -s)"
+```
+
+- test with a github repo
+
+```
+sudo apt install git
+
 ```
 
 ## Setup minimal config for terminal and nvim

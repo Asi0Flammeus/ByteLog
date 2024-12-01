@@ -135,3 +135,18 @@ wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20B
 sudo apt install fonts-font-awesome
 fc-cache -f -v
 ```
+
+### install daily apps
+
+- spotify 
+- vlc
+- obs
+    - add the possibility to get window from browser
+- sparrow
+- zen
+- chromium 
+- mattermost
+- signal
+- telegram 
+- 
+
